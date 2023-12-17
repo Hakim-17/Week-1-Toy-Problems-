@@ -17,4 +17,4 @@ function studentsGrade(grade){
     }
 }
 
-console.log(studentsGrade(39));
+console.log(studentsGrade(50));
