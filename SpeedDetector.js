@@ -1,16 +1,20 @@
+// Naming the function
 function speedDetector (speed){
     
+    // Checking the speed
     if (speed < 70){
         return 'OK';
     }
 
+        //declaring variables
     const speedLimit = 70;
     let demeritPoints = 0;
     const extraSpeed = speed -  speedLimit;
 
-    demeritPoints = Math.floor(extraSpeed/5); 
+    demeritPoints = Math.floor(extraSpeed/5); // Round number down to the nearest integer
 
-    if (demeritPoints > 0 && demeritPoints < 12){
+    // Checking the demerits points
+    if (demeritPoints > 0 && demeritPoints <= 12){
         return `Points: ${demeritPoints}`;
     } 
     else if (demeritPoints >= 12){

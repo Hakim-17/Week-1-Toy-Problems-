@@ -1,9 +1,11 @@
+//Naming the function
 function salaryCalculator(basicSalary, benefits){
-    const grossSalary = (basicSalary + benefits);
-    let nssf = 0;
+    const grossSalary = (basicSalary + benefits); //Declaring variables
+    let nssf = 0;               
     let nhif = 0;
     let paye = 0;
 
+    // Calculating NHIF
     if (grossSalary <= 5999){
         nhif = 150;
     }
@@ -57,14 +59,17 @@ function salaryCalculator(basicSalary, benefits){
     }
 
 
-
+//Calculating NSSF
     if (grossSalary <= 18000){
         nssf = 0.06 * grossSalary;
     }
     else {
         nssf = 1080;
     }
+
+
     const taxableSalary = grossSalary - nssf
+   // Calculating PAYE
     if (taxableSalary <= 24000){
         paye = 0.1 * taxableSalary;
     }
